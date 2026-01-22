@@ -1,0 +1,27 @@
+{
+  "project_name": "Raksha-Setu",
+  "version": "3.5.0",
+  "user_profile": {
+    "name": "Altamas",
+    "citizen_id": "89001",
+    "dob": "2008",
+    "photo": "image_0.png",
+    "verified": true
+  },
+  "medical_data": {
+    "blood_group": "O+ (Positive)",
+    "allergies": ["Penicillin", "Peanuts"],
+    "history": ["Appendix Removal"],
+    "meds": ["Multivitamins"]
+  },
+  "emergency_contacts": {
+    "police": "112",
+    "ambulance": "108",
+    "guardian_label": "Father",
+    "guardian_number": "9106271850"
+  },
+  "security": {
+    "doctor_pin": "9565418581",
+    "blockchain_hash": "#8f2a...9c1"
+  }
+}
