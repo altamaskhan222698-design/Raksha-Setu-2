@@ -1,0 +1,121 @@
+:root {
+    /* Wahi Red/Pink Gradient jo screenshot me tha */
+    --bg-gradient: linear-gradient(135deg, #FF416C 0%, #FF4B2B 100%);
+    --card-bg: #ffffff;
+    --dark-text: #2d3436;
+    --red-btn: #d63031;
+}
+
+body {
+    margin: 0; padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #111; /* Mobile ke peeche dark background */
+    height: 100vh;
+    display: flex; justify-content: center; align-items: center;
+}
+
+.main-container {
+    width: 100%; max-width: 400px;
+    height: 100%; max-height: 850px;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+}
+
+/* --- PUBLIC CARD --- */
+.profile-card {
+    background: var(--bg-gradient);
+    height: 100%;
+    display: flex; flex-direction: column; align-items: center;
+    padding-top: 60px; color: white;
+    text-align: center;
+}
+
+.img-container { position: relative; margin-bottom: 15px; }
+.profile-pic {
+    width: 130px; height: 130px;
+    border-radius: 50%;
+    border: 4px solid rgba(255,255,255,0.4);
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.verified-tick {
+    position: absolute; bottom: 5px; right: 5px;
+    background: #fff; color: #2ecc71;
+    border-radius: 50%; font-size: 24px; border: 3px solid #fff;
+}
+
+.user-name { margin: 0; font-size: 32px; font-weight: 700; letter-spacing: 1px; }
+.citizen-badge {
+    background: rgba(0,0,0,0.2);
+    padding: 6px 18px; border-radius: 20px;
+    font-size: 13px; margin-top: 8px;
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.sos-section {
+    margin-top: auto; margin-bottom: auto;
+    width: 100%; display: flex; flex-direction: column; align-items: center;
+}
+.instruction-text { opacity: 0.9; font-size: 14px; margin-bottom: 30px; }
+
+/* SOS BUTTON */
+.sos-btn {
+    width: 150px; height: 150px;
+    border-radius: 50%; border: none;
+    background: #c0392b; /* Darker red for contrast */
+    color: white; cursor: pointer;
+    position: relative;
+    box-shadow: 0 0 0 15px rgba(255,255,255,0.15);
+    transition: transform 0.2s;
+    display: flex; justify-content: center; align-items: center;
+}
+.sos-btn:active { transform: scale(0.95); }
+.sos-text { font-size: 36px; font-weight: bold; line-height: 1; z-index: 2; }
+.sos-text small { font-size: 12px; font-weight: normal; display: block; margin-top: 5px; }
+
+.pulse {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    border-radius: 50%; border: 2px solid white;
+    animation: pulse-animation 2s infinite;
+}
+@keyframes pulse-animation {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.6); opacity: 0; }
+}
+
+.blockchain-tag { font-size: 10px; opacity: 0.8; margin-top: 25px; }
+.footer-link {
+    padding: 20px; font-size: 13px; width: 100%;
+    background: rgba(0,0,0,0.1); cursor: pointer;
+    margin-top: auto;
+}
+
+/* --- MEDICAL CARD (Dark Theme for Contrast) --- */
+.hidden { display: none; }
+.medical-card {
+    background: #1e1e1e; color: white;
+    height: 100%; padding: 30px; box-sizing: border-box;
+    animation: slideUp 0.3s ease;
+}
+@keyframes slideUp { from {transform: translateY(100%);} to {transform: translateY(0);} }
+
+.card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.close-btn { background: #333; color: white; border: none; padding: 6px 15px; border-radius: 6px; cursor: pointer; }
+
+.data-group { background: #2d2d2d; padding: 20px; border-radius: 15px; border-left: 4px solid #FF4B2B; }
+.row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #444; }
+.critical strong { color: #ff4757; font-size: 18px; }
+.warning strong { color: #ffa502; }
+
+.family-call-btn {
+    width: 100%; padding: 18px; margin-top: 30px;
+    background: #ff4757; color: white;
+    border: none; border-radius: 12px;
+    font-size: 16px; font-weight: bold;
+    display: flex; justify-content: center; gap: 10px; cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+}
+.blockchain-hash { text-align: center; color: #555; font-size: 10px; margin-top: 20px; font-family: monospace; }
+                 
