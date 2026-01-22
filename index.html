@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Raksha-Setu | Citizen Safety</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <div id="publicView" class="profile-card">
+            <div class="profile-header">
+                <div class="img-container">
+                    <img src="image_0.png" alt="User Photo" class="profile-pic" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'">
+                    <i class="fas fa-check-circle verified-tick"></i>
+                </div>
+                <h1 class="user-name" id="userName">Loading...</h1>
+                <div class="citizen-badge">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" width="15">
+                    Citizen ID: <span id="userID">...</span>
+                </div>
+            </div>
+
+            <div class="sos-section">
+                <p class="instruction-text">To report accident & notify authorities, tap below:</p>
+                
+                <button class="sos-btn" onclick="startEmergencyProtocol()">
+                    <div class="pulse"></div>
+                    <span class="sos-text">SOS<br><small>EMERGENCY</small></span>
+                </button>
+                
+                <p class="blockchain-tag"><i class="fas fa-link"></i> Secured by Blockchain v3.0</p>
+            </div>
+
+            <div class="footer-link" onclick="doctorLogin()">
+                <i class="fas fa-user-md"></i> Authorized Doctor Login
+            </div>
+        </div>
+
+        <div id="doctorView" class="medical-card hidden">
+            <div class="card-top">
+                <h2>Medical Record <i class="fas fa-file-medical"></i></h2>
+                <button class="close-btn" onclick="location.reload()">🔒 Lock</button>
+            </div>
+
+            <div class="data-group">
+                <div class="row critical">
+                    <span>Blood Group:</span>
+                    <strong id="bloodGroup">...</strong>
+                </div>
+                <div class="row warning">
+                    <span>Allergies:</span>
+                    <strong id="allergies">...</strong>
+                </div>
+                <div class="row">
+                    <span>History:</span>
+                    <strong id="history">...</strong>
+                </div>
+                <div class="row">
+                    <span>Medication:</span>
+                    <strong id="meds">...</strong>
+                </div>
+            </div>
+
+            <button class="family-call-btn" onclick="callGuardian()">
+                <i class="fas fa-phone-alt"></i> Call <span id="guardName">Guardian</span>
+            </button>
+            
+            <div class="blockchain-hash">
+                Record Hash: <span id="hashVal">...</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+  </html>
+  
